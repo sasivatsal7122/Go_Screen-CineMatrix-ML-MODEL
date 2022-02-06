@@ -108,4 +108,4 @@ collab.crc.get_user_movie(user_movie)
 number_of_movies = 10
 # calling the recommend_movies method in RecommenderSystem class with object rc
 rc.recommend_movies(user_movie, number_of_movies)
-#collab.crc.recommend_movies()
+collab.crc.recommend_movies()
