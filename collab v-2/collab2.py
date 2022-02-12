@@ -8,10 +8,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
 from sklearn.metrics.pairwise import cosine_similarity
 import difflib
+import poster_fetch
+from poster_fetch import *
 
 # reading from the pre-processed dataset
 movies=pd.read_csv("moviesss.csv")
-ratings=pd.read_csv("ratings.csv")
+ratings=pd.read_csv("Datasets_misc/ratings.csv")
 Final = pd.read_csv("Final.csv")
 
 
@@ -74,6 +76,7 @@ def recommend(user_fav_movie):
     print("====================================================================\n") 
     for movie in sim_movie_ls:
         print(movie)
+    return sim_movie_ls
 
 
 # getting the user input
@@ -84,4 +87,5 @@ close_match = difflib.get_close_matches(user_fav_movie.title(), list(movies['tit
 user_fav_movie = close_match[0]
 print(user_fav_movie)
 # calling the recommender function
-recommend(user_fav_movie)
+movie_ls = recommend(user_fav_movie)
+poster_fetch.movie_poster_fetch(movie_ls)
