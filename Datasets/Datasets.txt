@@ -1,0 +1,9 @@
+Total size of the datasets is so huge(1.18GB), so could'nt upload them in github
+
+--> No Probs... download the compressed zip file(265 MB) from my drive
+
+--> unzip the files, copy paste them into Datasets/ directory
+
+======== DOWNLOAD FORM HERE ========
+
+++++++> https://drive.google.com/drive/folders/1ySfUOPOwmEs6PVF_R_0e4xTtPg_FnJN7?usp=sharing

@@ -7,13 +7,12 @@ import numpy as np
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
 import difflib
-
 import poster_fetch
 from poster_fetch import *
 
 # reading the dataset
-df_movies  = pd.read_csv('Datasets_misc/movies.csv')
-df_ratings  = pd.read_csv('Datasets_misc/ratings.csv')
+df_movies  = pd.read_csv('Datasets/movies.csv')
+df_ratings  = pd.read_csv('Datasets/ratings.csv')
 
 def pre_process():
     global movie_user_mat_sparse,movie_to_idx,movie_user_mat
@@ -101,13 +100,19 @@ def recommend(model_knn=model_knn,data=movie_user_mat_sparse,fav_movie=" ",mappe
         print(movie)
     return movie_ls   
         
-user_fav_movie = input("enter you're fav movie: ")
-# searching for the closest match
-close_match = difflib.get_close_matches(user_fav_movie.title(), list(df_movies['title']))
-# seelcting the most closest one
-user_fav_movie = close_match[0]
-print(user_fav_movie)
-
+        
+        
+     
 ''' DRIVER FUNCTION TO MAKE RECOMMENDATIONS '''
-movie_ls = recommend(fav_movie=user_fav_movie)
-poster_fetch.movie_poster_fetch(movie_ls)
+
+def KNN_recommend(user_fav_movie):
+    # searching for the closest match
+    close_match = difflib.get_close_matches(user_fav_movie.title(), list(df_movies['title']))
+    # seelcting the most closest one
+    user_fav_movie = close_match[0]
+    print(user_fav_movie)
+    movie_ls=recommend(fav_movie=user_fav_movie)
+    print("\n--=-=-=-=-=-=-=-=-==-MOVIE_POSTERS--=-=-=-=-=-=-=-=-==-\n")
+    poster_fetch.movie_poster_fetch(movie_ls)
+        
+
