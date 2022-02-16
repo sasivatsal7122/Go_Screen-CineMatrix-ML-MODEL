@@ -18,9 +18,10 @@ def movie_poster_fetch(movie_ls):
 
     movie_id_ls=[]
     for title in titles:
-        blah = tmdb.loc[tmdb['original_title'] == title]
-        movie_id = int(blah['id'])
-        movie_id_ls.append(movie_id)
+        x = tmdb.loc[tmdb['original_title'] == title]
+        if x.size!=0:
+            movie_id = x['id'].values[0]
+            movie_id_ls.append(movie_id)
     print(movie_id_ls)
 
     def fetch_poster(movie_id):

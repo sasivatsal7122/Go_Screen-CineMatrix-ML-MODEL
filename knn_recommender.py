@@ -7,6 +7,8 @@ import numpy as np
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
 import difflib
+import scipy
+import json
 import poster_fetch
 from poster_fetch import *
 
@@ -69,7 +71,13 @@ def pre_process():
     movie_user_mat_sparse = csr_matrix(movie_user_mat.values)
 
 ''' CALLING THE PRE-PROCESS FUNCTION '''
-pre_process()
+#pre_process()
+
+
+movie_user_mat_sparse = scipy.sparse.load_npz('Datasets/movie_user_mat_sparse.npz')
+with open('Datasets/movie_to_idx.json') as json_file:
+    movie_to_idx = json.load(json_file)
+
 
 ''' Making the model '''
 model_knn = NearestNeighbors(metric='cosine', algorithm='brute', n_neighbors=20, n_jobs=-1)
@@ -101,7 +109,7 @@ def recommend(model_knn=model_knn,data=movie_user_mat_sparse,fav_movie=" ",mappe
     return movie_ls   
         
         
-        
+
      
 ''' DRIVER FUNCTION TO MAKE RECOMMENDATIONS '''
 
@@ -109,10 +117,13 @@ def KNN_recommend(user_fav_movie):
     # searching for the closest match
     close_match = difflib.get_close_matches(user_fav_movie.title(), list(df_movies['title']))
     # seelcting the most closest one
-    user_fav_movie = close_match[0]
-    print(user_fav_movie)
-    movie_ls=recommend(fav_movie=user_fav_movie)
-    print("\n--=-=-=-=-=-=-=-=-==-MOVIE_POSTERS--=-=-=-=-=-=-=-=-==-\n")
-    poster_fetch.movie_poster_fetch(movie_ls)
+    if bool(close_match):
+        user_fav_movie = close_match[0]
+        print(user_fav_movie)
+        movie_ls=recommend(fav_movie=user_fav_movie)
+        print("\n--=-=-=-=-=-=-=-=-==-MOVIE_POSTERS--=-=-=-=-=-=-=-=-==-\n")
+        poster_fetch.movie_poster_fetch(movie_ls)
+    else:
+        print("Could'nt find movie in our database")
         
 
