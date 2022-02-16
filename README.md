@@ -24,6 +24,29 @@
   ## For starters What is a Recommender system?
 A recommender system is a simple algorithm whose aim is to provide the most relevant information to a user by discovering patterns in a dataset. The algorithm rates the items and shows the user the items that they would rate highly. An example of recommendation in action is when you visit Amazon and you notice that some items are being recommended to you or when Netflix recommends certain movies to you. They are alsoused by Music streaming applications such as Spotify and Deezer to
 recommend music that you might like. During the last few decades, with the rise of Youtube, Amazon, Netflix and many other such web services, recommender systems have taken more and more place in our lives. From e-commerce (suggest to buyers articles that could interest them) to online advertisement (suggest to users the right contents, matching their preferences), recommender systems are today unavoidable in our daily online journeys.
+ 
+  <p align="center"><img src="https://www.researchgate.net/profile/Alan-Eckhardt/publication/220827211/figure/fig2/AS:394007092973580@1470950019808/Structure-of-a-recommender-system.png" width="100%" ></p>
 
-  
+ ## Classification of Recommending system:
+  <p align="center"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S1319157819304963-gr1.jpg" width="100%" ></p>
+ 
+## In CineMatrix i employed content and collabrative systems</br></br>
+  - Under **content** based system i used item based filtering, techniques i implemented are: </br></br>
+       - **TF-IDF (term frequency-inverse document frequency)** is a statistical measure that evaluates how relevant a word is to a document in a collection of documents.
+        It works by increasing proportionally to the number of times a word appears in a document, but is offset by the number of documents that contain the word. So, words that         are common in every document. Multiplying and these two(term frequency,inverse document frequency) numbers results in the TF-IDF score of a word in a document. The               higher the score, the more relevant that word is in that particular document.</br>
+      - **CountVectorizer** is a great tool provided by the scikit-learn library in Python. It is used to transform a given text into a vector on the basis of the frequency              (count) of each word that occurs in the entire text.CountVectorizer creates a matrix in which each unique word is represented by a column of the matrix, and each text            sample from the document is a row in the matrix. The value of each cell is nothing but the count of the word in that particular text sample.</br> 
+      - i observed tfidf produces great results for some given inputs, and countvectorizer provied great results for other inputs. so i combined the results of both tfidf and            count vectorizer to get atmost precise results, then i passed the obtained combined matrix to the find the cosine similarity.</br>
+      - **Cosine similarity** measures the similarity between two vectors of an inner product space. It is measured by the cosine of the angle between two vectors and determines          whether two vectors are pointing in roughly the same direction. It is often used to measure document similarity in text analysis.the smaller the angle and the greater            the match between vectors.</br>
+      - The final output is result of both tfidf and count vectorizer, i selected the top 10 best results and displayed them. Thanks to the pre-processing i've done to the               dataset it takes less than second to compute and display recommended movies.</br></br>
+      
+  - Under **collabrative** based system i used item based memory based filtering, under memory based i implemented both user based and item based techniques: </br></br>
+     - **TF-IDF (term frequency-inverse document frequency)** is a statistical measure that evaluates how relevant a word is to a document in a collection of documents.
+      It works by increasing proportionally to the number of times a word appears in a document, but is offset by the number of documents that contain the word. So, words that         are common in every document. Multiplying and these two(term frequency,inverse document frequency) numbers results in the TF-IDF score of a word in a document. The               higher the score, the more relevant that word is in that particular document.</br>
+    - **CountVectorizer** is a great tool provided by the scikit-learn library in Python. It is used to transform a given text into a vector on the basis of the frequency              (count) of each word that occurs in the entire text.CountVectorizer creates a matrix in which each unique word is represented by a column of the matrix, and each text            sample from the document is a row in the matrix. The value of each cell is nothing but the count of the word in that particular text sample.</br> 
+    - i observed tfidf produces great results for some given inputs, and countvectorizer provied great results for other inputs. so i combined the results of both tfidf and            count vectorizer to get atmost precise results, then i passed the obtained combined matrix to the find the cosine similarity.</br>
+    - **Cosine similarity** measures the similarity between two vectors of an inner product space. It is measured by the cosine of the angle between two vectors and determines          whether two vectors are pointing in roughly the same direction. It is often used to measure document similarity in text analysis.the smaller the angle and the greater            the match between vectors.</br>
+    - The final output is result of both tfidf and count vectorizer, i selected the top 10 best results and displayed them. Thanks to the pre-processing i've done to the               dataset it takes less than second to compute and display recommended movies.
+
+
+
   
