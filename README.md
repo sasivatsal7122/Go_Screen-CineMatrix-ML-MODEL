@@ -23,7 +23,7 @@
   ### Also CheckOut our one of its kind Song Recommender <a href="www.google.com">JAXXTOPIA</a>
   <p align="center"><img src="preview/jaxxtopia.gif" width="100%" >( under construction, will be available shortly )</p>
 
-   ### A huge shoutout and thanks to <a href=''>Surya</a> and <a href=''>Harsha</a> for making this possible in short time, <a href=''>Surya</a> I couldn’t have done it without you, Thanks for your hard work on this. And <a href=''>Harsha</a> thanks man for the wonderful UI/UX you really have an eye for the design.
+   ### A huge shoutout and thanks to <a href='https://github.com/surya-teja-222'>Surya</a> and <a href='https://github.com/HarshaMalla'>Harsha</a> for making this possible in short time, <a href='https://github.com/surya-teja-222'>Surya</a> I couldn’t have done it without you, Thanks for your hard work on this. And <a href='https://github.com/HarshaMalla'>Harsha</a> thanks man for the wonderful UI/UX you really have an eye for the design.
    ___
   
  ### That's all for the website promotion, now for the nerd like me who are interested in how this thing works, here is brief summary of the backend:
@@ -49,7 +49,7 @@ recommend music that you might like. During the last few decades, with the rise 
       - i observed tfidf produces great results for some given inputs, and countvectorizer provied great results for other inputs. so i combined the results of both tfidf and            count vectorizer to get atmost precise results, then i passed the obtained combined matrix to the find the cosine similarity.</br>The final output is result of both tfidf and count vectorizer, i selected the top 10 best results and displayed them. Thanks to the pre-processing i've done to the dataset it takes less than second to compute and display recommended movies.</br></br>
       
   - Under **collabrative** based system i used item based memory based filtering, under memory based i implemented both user based and item based techniques: </br></br>
-    -,efmwe.fm
+    -
      
 
   
