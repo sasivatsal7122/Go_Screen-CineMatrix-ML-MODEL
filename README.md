@@ -12,8 +12,9 @@
 - ### Not just the similar movies, you are also greeted with other great movies in the segment that are liked by other users with a similar taste as you.
 - ### Our Recommender works on both Item_Based and User_based Collabrative Filtering giving you most flawless recommendations
 - ### Here in CineMatrix we value you're time, we are thriving and trying our best to provide you with best user experience free of cost.
- <h1 align="center">Visit wesbite --> <a href='https://cinematrix.subzeroo.tech/'>Go_screen-CineMatrix</a> <--</h1>
-  
+ <h3 align="center">Visit website:-</h3>
+ <h1 align="center">--><a href='https://cinematrix.subzeroo.tech/'>Go_screen-CineMatrix</a><--</h1>
+
   
   <h1 align='center'>About The Team</h1>
   <p align="center"><img src="preview/aboutus.png" width="100%" ></p>
@@ -22,7 +23,8 @@
   ### Also CheckOut our one of its kind Song Recommender <a href="www.google.com">JAXXTOPIA</a>
   <p align="center"><img src="preview/jaxxtopia.gif" width="100%" >( under construction, will be available shortly )</p>
 
-  ___
+   ### A huge shoutout and thanks to <a href=''>Surya</a> and <a href=''>Harsha</a> for making this possible in short time, <a href=''>Surya</a> I couldn’t have done it without you, Thanks for your hard work on this. And <a href=''>Harsha</a> thanks man for the wonderful UI/UX you really have an eye for the design.
+   ___
   
  ### That's all for the website promotion, now for the nerd like me who are interested in how this thing works, here is brief summary of the backend:
   ## For starters What is a Recommender system?
