@@ -17,7 +17,9 @@
   <p align="center"><img src="preview/aboutus.png" width="100%" ></p>
   
   
-  ### Also CheckOut our one of its kind Song Recommender <a href="www.google.com">JAXXTOPIA</a> 
+  ### Also CheckOut our one of its kind Song Recommender <a href="www.google.com">JAXXTOPIA</a> ( under construction )
+  <p align="center"><img src="preview/jaxxtopia.gif" width="100%" ></p>
+
   ___
   
  ### That's all for the website promotion, now for the nerd like me who are interested in how this thing works, here is brief summary of the backend:
