@@ -17,8 +17,8 @@
   <p align="center"><img src="preview/aboutus.png" width="100%" ></p>
   
   
-  ### Also CheckOut our one of its kind Song Recommender <a href="www.google.com">JAXXTOPIA</a> ( under construction )
-  <p align="center"><img src="preview/jaxxtopia.gif" width="100%" ></p>
+  ### Also CheckOut our one of its kind Song Recommender <a href="www.google.com">JAXXTOPIA</a>
+  <p align="center"><img src="preview/jaxxtopia.gif" width="100%" >( under construction, will be available shortly )</p>
 
   ___
   
