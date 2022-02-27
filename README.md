@@ -48,8 +48,29 @@ recommend music that you might like. During the last few decades, with the rise 
       added couple of coloumns to make the workflow easier, then took the user input, searched for the matrching result in the dataset using dfflib, dfflib searches for the best matching string and returns the value. Then i made two objects of classes TfidfVectorizer() and CountVectorizer(), then i used fit_transform() method for tfidf and count seperately to convert the text data into numerical data and finally used cosine similarity to find the best matching result i.e the words that are makign less angle with the word i given i.e the user movie title. Remaining is to enumerate through the similar movies that cosine similariity has found and print the top results after sorting similarity scores in descending order. The execution time and system resources consumed from this approach are very less compared to other techniques. 
       - i observed tfidf produces great results for some given inputs, and countvectorizer provied great results for other inputs. so i combined the results of both tfidf and            count vectorizer to get atmost precise results, then i passed the obtained combined matrix to the find the cosine similarity.</br>The final output is result of both tfidf and count vectorizer, i selected the top 10 best results and displayed them. Thanks to the pre-processing i've done to the dataset it takes less than second to compute and display recommended movies.</br></br>
       
-  - Under **collabrative** based system i used item based memory based filtering, under memory based i implemented both user based and item based techniques: </br></br>
-    -
-     
-
-  
+  - Under **collabrative** based system i used content based filtering, techniques i implemented are: </br></br>
+       - In User-based collaborative filtering products are
+recommended to a user based on the fact that the products have been
+liked by users similar to the user. For example, if Derrick and Dennis
+like the same movies and a new movie come out that Derick like,
+then we can recommend that movie to Dennis because Derrick and
+Dennis seem to like the same movies.
+       - I used a movie lend dataset which is really huge and has a size of 250mb for a CSV file.
+       I loadaed the dataset stored it in a pandas df, movie lens dataset set contains multiple files each categorized seperately, so i grouped them based on the requirement it was such an headache.After clubbing and removing unneccessary data in rows, cols the final raw input is ready. Then to know what i'm dealing with i ran a few datavisualizing techniques and also built-in pandas methods such as .unique, .describe you get the point ik. I decided on using movie ratings as a factor for deciding the recommended movies.i used these ratings to calculate the
+correlation between the movies. Correlation is a statistical measure
+that indicates the extent to which two or more variables fluctuate
+together. Movies that have a high correlation coefficient are the movies
+that are most similar to each other. In our case, we shall use the Pearson
+correlation coefficient. This number will lie between -1 and 1. 1 indicates
+a positive linear correlation while -1 indicates a negative correlation. 0
+indicates no linear correlation. Therefore, movies with a zero correlation
+are not similar at all.In order to do this i need create a pivot matrix with row as User_id and col as movie titles and values as ofcourse rating of that movie rated by the respective user.The final step is omputing the correlation between
+user given movie ratings and the ratings of the rest of the movies in the
+dataset.In order to compute the correlation between two dataframes we use
+pandas corwith functionality. Corrwith computes the pairwise correlation
+of rows or columns of two data frames objects. Let's use this functionality
+to get the correlation between each movie's rating and the ratings of the
+Air Force One movie.
+<p align='center'><img width="600" src='https://cdn.wallstreetmojo.com/wp-content/uploads/2019/09/Pearson-Correlation-Coefficient-Formula.jpg'></img></p>
+ Last step is to order the correlation score in decsending order and return the top 10 movies with highest score, those movies will be the most similar ones. This model works fine but i wanted my recommender to be divesified so i also used other collabrative filtering methods which we will be discussing in the next section.
+ 
