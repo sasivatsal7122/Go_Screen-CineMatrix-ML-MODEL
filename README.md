@@ -71,6 +71,6 @@ pandas corwith functionality. Corrwith computes the pairwise correlation
 of rows or columns of two data frames objects. Let's use this functionality
 to get the correlation between each movie's rating and the ratings of the
 Air Force One movie.
-<p align='center'><img width="600" src='https://cdn.wallstreetmojo.com/wp-content/uploads/2019/09/Pearson-Correlation-Coefficient-Formula.jpg'></img></p>
- Last step is to order the correlation score in decsending order and return the top 10 movies with highest score, those movies will be the most similar ones. This model works fine but i wanted my recommender to be divesified so i also used other collabrative filtering methods which we will be discussing in the next section.
+        <p align="center"><img src="https://cdn.wallstreetmojo.com/wp-content/uploads/2019/09/Pearson-Correlation-Coefficient-Formula.jpg" width="600"></p>
+      - Last step is to order the correlation score in decsending order and return the top 10 movies with highest score, those movies will be the most similar ones. This model works fine but i wanted my recommender to be divesified so i also used other collabrative filtering methods which we will be discussing in the next section.
  
