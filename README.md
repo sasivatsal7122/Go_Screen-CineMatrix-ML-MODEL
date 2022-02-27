@@ -89,3 +89,7 @@ Air Force One movie.
    <p align='center'><img src='preview/sys1.jpeg'></img></p>
  -  so we decided to hop on to other methods too , one such method in our mind is to use matrix factorisation and support vector machines. 
  - HELP NEEDED FOR RECOMMNDER SYSTEM FOR MATRIX FACTORISATION MODEL FOR MODEL BASED COLLABRATIVE FILTERING,AS MATRIX FACTORISATION IS BETTER AT DEALING WITH SCALABILTY AND SPARSITY THAN THE PRESENT MODEL IN THIS SYSTEM.
+ - We are open to FORKS and PULL_REQUESTS.
+
+# Thank You.
+## Peace ✌️
